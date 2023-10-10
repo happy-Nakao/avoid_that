@@ -38,7 +38,7 @@ class Grasp(smach.State):
         self.navi_srv = rospy.ServiceProxy('navi_location_server', NaviLocation)
 
         
-    def execute(self, userdata):
+    def execute(self):
         self.navi_srv('table')
         #grasp_name = userdata.object_name_in
         rospy.sleep(2.0)
